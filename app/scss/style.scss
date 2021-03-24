@@ -1,0 +1,184 @@
+                @import '_vars';
+                @import '_fonts';
+                @import '_reset';
+                @import '_global';
+                .header {
+                    padding: 50px 0;
+                    &__inner {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        color: $title;
+                        @extend %rubik-500;
+                    }
+                }
+                
+                .logo {
+                    display: flex;
+                    font-size: 36px;
+                    line-height: 58px;
+                    color: $accent;
+                    @extend %rubik-500;
+                    &__img {
+                        margin-right: 12px;
+                    }
+                }
+                
+                .menu {
+                    &__list {
+                        display: flex;
+                    }
+                    &__list-item+.menu__list-item {
+                        margin-left: 35px;
+                    }
+                    &__list-link {
+                        color: $accent;
+                        font-size: 15px;
+                        line-height: 12px;
+                        padding: 2px;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                    &__list-add {
+                        margin-left: 2px;
+                    }
+                }
+                
+                .user-nav {
+                    display: flex;
+                    &__link {
+                        position: relative;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 50%;
+                        display: flex;
+                    }
+                    &>.user-nav__link:first-child {
+                        background-color: $brand-color-one;
+                    }
+                    &>.user-nav__link:last-child {
+                        background-color: $brand-color-two;
+                    }
+                    &__link-img {
+                        margin: auto;
+                    }
+                    &__spec {
+                        display: flex;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        margin: 0 20px;
+                        width: 180px;
+                        height: 50px;
+                        border-radius: 30%/100%;
+                        background-color: $brand-color-tree;
+                    }
+                    &__spec::before {
+                        position: absolute;
+                        content: "";
+                        width: 2px;
+                        height: 32px;
+                        background-color: #fde7d3;
+                    }
+                    &__num {
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        background-color: #fff;
+                        border-radius: 50%;
+                        top: 14%;
+                        right: 14%;
+                        @extend %dmsans-400;
+                        font-size: 10px;
+                        line-height: 16px;
+                        text-align: center;
+                    }
+                }
+                
+                .footer {
+                    @extend %rubik-400;
+                    color: $footer;
+                    font-size: 14px;
+                    line-height: 24px;
+                    padding-top: 85px;
+                }
+                
+                .footer-top {
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #dae4e9;
+                    padding-bottom: 65px;
+                    & .logo {
+                        margin-bottom: 25px;
+                    }
+                    &__address,
+                    &__phone {
+                        text-transform: uppercase;
+                        margin-bottom: 15px;
+                        display: block;
+                    }
+                    &__text {
+                        margin-bottom: 40px;
+                    }
+                    &__item-title {
+                        @extend %dmsans-700;
+                        color: $footer-title;
+                        font-size: 16px;
+                        line-height: 70px;
+                        margin-bottom: 30px;
+                        display: inline;
+                        vertical-align: bottom;
+                        text-transform: uppercase;
+                    }
+                    &__item:not(:last-child) {
+                        max-width: 200px;
+                        width: 100%;
+                        margin-right: 100px;
+                    }
+                    &__item:last-child {
+                        flex-grow: 1;
+                    }
+                    &__list-item {
+                        margin-bottom: 15px;
+                    }
+                    &__form {
+                        display: flex;
+                        @extend %dmsans-400;
+                    }
+                    &__input {
+                        border: none;
+                        padding: 14px 16px;
+                        background-color: $footer-input-bg;
+                        &::placeholder {
+                            opacity: 1;
+                            font-size: 12px;
+                            line-height: 21px;
+                            color: #234969;
+                        }
+                    }
+                    &__button {
+                        font-size: 14px;
+                        border: none;
+                        background-color: $brand-color-two;
+                        color: #f4f7f8;
+                        line-height: 21px;
+                        padding: 14px 16px;
+                    }
+                }
+                
+                .footer-bottom {
+                    display: flex;
+                    padding: 40px 0;
+                    justify-content: space-between;
+                    &__list {
+                        display: flex;
+                    }
+                    &__item {
+                        padding: 0 15px;
+                    }
+                    &__item:not(:last-child) {
+                        border-right: 1px solid $footer;
+                    }
+                }
+                
+                @import '_media';
