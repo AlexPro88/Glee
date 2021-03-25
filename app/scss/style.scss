@@ -1,6 +1,7 @@
                 @import '_vars';
                 @import '_fonts';
                 @import '_reset';
+                @import '_libs';
                 @import '_global';
                 .header {
                     padding: 50px 0;
@@ -178,6 +179,79 @@
                     }
                     &__item:not(:last-child) {
                         border-right: 1px solid $footer;
+                    }
+                }
+                
+                .top-slider {
+                    background-color: $brand-color-tree;
+                    background-image: url(../images/top-slider-bg.png);
+                    background-repeat: no-repeat;
+                    background-size: 35%;
+                    background-position: 80% 90px;
+                    &__item {
+                        display: flex !important;
+                        justify-content: space-between;
+                        padding: 225px 0 280px;
+                    }
+                    &__title {
+                        @extend %rubik-500;
+                        font-size: 70px;
+                        line-height: 72px;
+                        color: $title;
+                        margin-bottom: 45px;
+                        text-transform: uppercase;
+                    }
+                    &__text {
+                        @extend %rubik-400;
+                        max-width: 400px;
+                        margin-bottom: 25px;
+                        color: $accent;
+                    }
+                    &__btn {
+                        @extend %rubik-500;
+                        color: #fff;
+                        font-size: 15px;
+                        line-height: 12px;
+                        padding: 20px 25px;
+                        background-color: $brand-color-two;
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+                    &__btn::after {
+                        content: '\2192';
+                        margin-left: 55px;
+                    }
+                    &__img {
+                        padding-top: 60px;
+                    }
+                    .slick-dots {
+                        @extend %rubik-500;
+                        font-size: 10px;
+                        line-height: 8;
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                        bottom: 45px;
+                        li {
+                            margin: 0 10px;
+                            line-height: 0;
+                            button {
+                                color: #667983;
+                                padding: 0;
+                                background-color: fde3cc;
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                border: none;
+                                position: relative;
+                            }
+                            &.slick-active {
+                                button {
+                                    color: $title;
+                                    background-color: #fff;
+                                }
+                            }
+                        }
                     }
                 }
                 
