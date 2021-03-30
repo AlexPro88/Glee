@@ -22,3 +22,42 @@ main {
     padding: 0 15px;
     margin: 0 auto;
 }
+
+.title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: #191919;
+}
+
+.btn {
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 12px;
+    padding: 20px 25px;
+    cursor: pointer;
+    &::after {
+        content: '\2192';
+        margin-left: 55px;
+    }
+}
+
+.menu-filter {
+    text-align: center;
+    margin-bottom: 80px;
+    &__item {
+        border: none;
+        background-color: transparent;
+        color: $default;
+        outline: transparent;
+    }
+    .menu-filter__item--active {
+        color: #191919;
+    }
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+    &__item:hover {
+        cursor: pointer;
+        color: #191919;
+    }
+}
