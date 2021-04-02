@@ -27,23 +27,24 @@ main {
     @extend %dmsans-700;
     font-size: 36px;
     color: #191919;
+    text-align: center;
 }
 
 .btn {
     @extend %rubik-500;
     font-size: 15px;
     line-height: 12px;
-    padding: 20px 25px;
     cursor: pointer;
     &::after {
         content: '\2192';
         margin-left: 55px;
+        font-size: 30px;
     }
 }
 
 .menu-filter {
     text-align: center;
-    margin-bottom: 80px;
+    padding-bottom: 80px;
     &__item {
         border: none;
         background-color: transparent;

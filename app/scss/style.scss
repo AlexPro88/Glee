@@ -212,6 +212,7 @@
     &__btn {
         color: #fff;
         background-color: $brand-color-two;
+        padding: 20px 25px;
         display: inline-block;
     }
     &__img {
@@ -296,17 +297,14 @@
 }
 
 .week {
-    padding-top: 80px;
     .title {
-        text-align: center;
-        padding-bottom: 40px;
+        padding: 80px 0 40px;
     }
 }
 
 .products {
     display: grid;
     grid-template-columns: repeat(4, 270px);
-    min-height: 800px;
     gap: 30px;
     &__item {
         position: relative;
@@ -347,7 +345,6 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        // display: flex;
         justify-content: center;
         align-items: flex-end;
         display: none;
@@ -359,6 +356,7 @@
         background-color: #fefefe;
         border-radius: 50%;
         margin-bottom: 150px;
+        cursor: pointer;
     }
     &__user-nav img:not(:last-child) {
         margin-right: 15px;
@@ -384,14 +382,70 @@
             max-width: 340px;
         }
     }
-    &__img {
-        margin: -90px 15px 80px 0;
-    }
     &__item:first-child {
         margin-right: 15px;
     }
     &__item:last-child {
         margin-left: 15px;
+    }
+    &__img {
+        margin: -90px 15px 80px 0;
+    }
+    &__item-inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: $title;
+    }
+    &__title {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 35px;
+    }
+    &__text {
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    &__link {
+        border: 1px solid#b3b7b5;
+        border-radius: 5px;
+        padding: 25px 20px;
+        width: 180px;
+    }
+    &__link:after {
+        margin-left: 45px;
+        font-size: 15px;
+    }
+}
+
+.new-des {
+    .title {
+        padding: 100px 0 30px;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    &__item {
+        position: relative;
+        cursor: pointer;
+    }
+    &__text {
+        max-width: 165px;
+        position: absolute;
+        top: 40px;
+        left: 35px;
+    }
+    &__title {
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: #191919;
+    }
+    &__type {
+        color: $brand-color-two;
     }
 }
 

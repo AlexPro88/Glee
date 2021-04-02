@@ -7,10 +7,22 @@ $(function() {
         autoplaySpeed: 2000
     });
 
+    var containerEl1 = document.querySelector('[data-ref="container-1"]');
+    var containerEl2 = document.querySelector('[data-ref="container-2"]');
 
-    // $('.menu-filter__item').on('click', function() {
-    //     $('.menu-filter__item').removeClass('menu-filter__item--active');
-    //     $('this').toggleClass('menu-filter__item--active');
+    var config1 = {
+        controls: {
+            scope: 'local'
+        }
+    };
+    var config2 = {
+        controls: {
+            scope: 'local'
+        }
+    };
 
-    // });
+
+    var mixer2 = mixitup(containerEl1, config1);
+    var mixer2 = mixitup(containerEl2, config2);
+
 });
