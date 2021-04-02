@@ -449,4 +449,18 @@
     }
 }
 
+.video {
+    &__link {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 120px 0;
+    }
+    &__play {
+        position: absolute;
+        margin: auto;
+    }
+}
+
 @import '_media';
